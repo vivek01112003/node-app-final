@@ -1,0 +1,13 @@
+services:
+  todo-app:
+    build: .
+    container_name: node-todo-app
+    ports:
+      - "3000:3000"
+    volumes:
+      - todo-data:/app/data
+    restart: unless-stopped
+
+volumes:
+  todo-data:
+
